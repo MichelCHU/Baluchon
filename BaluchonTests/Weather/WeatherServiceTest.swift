@@ -92,9 +92,9 @@ class WeatherServiceTest: XCTestCase {
                 return
             }
             
-            let cityNY = OpenWeatherMap.self
+            let description = "light snow"
             
-            XCTAssertTrue(cityNY == weatherOK.list[0].weather[0].weatherDescription)
+            XCTAssertTrue(description == weatherOK.list[0].weather[0].weatherDescription)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
